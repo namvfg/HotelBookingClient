@@ -91,6 +91,9 @@ Deploy the `dist` folder to Nginx or Apache.
 - Email: mathilde.emard@example.com
 - Password: 123456
 
+### Payment Accounts
+- https://sandbox.vnpayment.vn/apis/vnpay-demo/
+
 ---
 
 ## 8. Environment Configuration
