@@ -110,6 +110,7 @@ Adjust API URL according to your backend deployment.
 - Backend must be running before starting frontend.
 - Always run `npm run build` before deploying to production.
 - Server must redirect all routes to `index.html` for React Router to work properly.
+- Project is in progress, please fogive me if it does not work.
 
 ---
 
