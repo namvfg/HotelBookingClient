@@ -5,7 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import Input from "../../../shared/components/Input";
 import type { RoomFormState } from "../../../shared/type/room/roomFormState";
 import type { RoomDetail } from "../../../shared/type/room/roomDetail";
-import { isScrollNearBottom } from "../../../shared/utils/scroll";
 import { handleInfiniteScroll } from "../../../shared/utils/infiniteScroll";
 
 export default function RoomForm({ type }: { type: TableActionType }) {
@@ -300,9 +299,9 @@ export default function RoomForm({ type }: { type: TableActionType }) {
                 <label className="text-sm font-medium">Images</label>
 
                 {/* existing images */}
-                {type === "edit" && roomDetail?.images?.length > 0 && (
+                {type === "edit" && (roomDetail?.images?.length ?? 0) > 0 && (
                     <div className="flex gap-3 flex-wrap">
-                        {roomDetail.images.map((img: any) => {
+                        {roomDetail?.images?.map((img: any) => {
                             const marked = deletedImageIds.includes(img.id);
 
                             return (

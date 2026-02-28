@@ -128,7 +128,7 @@ export default function HotelForm({ type }: { type: TableActionType }) {
                     <Input label="ID" value={String(hotelDetail.id)} disabled />
                     <Input
                         label="Manager"
-                        value={hotelDetail.manager?.name ?? "—"}
+                        value={hotelDetail?.manager?.name ?? "—"}
                         disabled
                     />
                     <Input label="Created at" value={hotelDetail.created_at} disabled />
@@ -207,9 +207,9 @@ export default function HotelForm({ type }: { type: TableActionType }) {
                 <label className="text-sm font-medium">Images</label>
 
                 {/* existing images */}
-                {type === "edit" && hotelDetail?.images?.length > 0 && (
+                {type === "edit" && (hotelDetail?.images?.length ?? 0) > 0 && (
                     <div className="flex gap-3 flex-wrap">
-                        {hotelDetail.images.map((img: any) => {
+                        {hotelDetail?.images?.map((img: any) => {
                             const marked = deletedImageIds.includes(img.id);
 
                             return (
