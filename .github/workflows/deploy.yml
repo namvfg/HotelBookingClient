@@ -28,6 +28,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare directory on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: root
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            mkdir -p /var/www/frontend
+
       - name: Deploy to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -35,5 +44,5 @@ jobs:
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "app-client/dist/*"
-          target: "/var/www/frontend/app-client/dist"
+          target: "/var/www/frontend"
           rm: true
