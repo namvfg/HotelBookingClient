@@ -52,12 +52,15 @@ export const endpoints = {
 
 }
 
+const serverIp = "149.28.135.167";
+// const serverIp = "127.0.0.1:8000";
+
 export default axios.create({
-    baseURL: `http://127.0.0.1:8000/api`,
+    baseURL: `http://${serverIp}/api`,
 });
 
 export const adminAuthApis = axios.create({
-    baseURL: "http://127.0.0.1:8000/api",
+    baseURL: `http://${serverIp}/api`,
 });
 
 adminAuthApis.interceptors.request.use((config) => {
@@ -71,7 +74,7 @@ adminAuthApis.interceptors.request.use((config) => {
 });
 
 export const userAuthApis = axios.create({
-    baseURL: "http://127.0.0.1:8000/api",
+    baseURL: `http://${serverIp}/api`,
 });
 
 userAuthApis.interceptors.request.use((config) => {
