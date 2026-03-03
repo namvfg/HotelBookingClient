@@ -34,7 +34,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             rm -rf /var/www/frontend/app-client/dist
-            mkdir -p /var/www/frontend/app-client/dist
 
       - name: Deploy to VPS
         uses: appleboy/scp-action@v0.1.7
