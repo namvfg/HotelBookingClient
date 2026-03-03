@@ -9,20 +9,23 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: app-client 
+
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
-        working-directory: app-client
 
-      - name: Build project
+      - name: Build
         run: npm run build
 
       - name: Deploy to VPS
@@ -31,6 +34,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "dist/*"
+          source: "app-client/dist/*"
           target: "/var/www/frontend"
           rm: true
