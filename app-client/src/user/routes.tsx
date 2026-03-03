@@ -11,6 +11,7 @@ import MyBookings from "./pages/MyBookings";
 import Payment from "./pages/Payment";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentFailed from "./pages/PaymentFailed";
+import UserProfile from "./pages/UserProfile";
 
 
 export const userRoutes = (
@@ -24,9 +25,11 @@ export const userRoutes = (
             <Route path="/register" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/my-bookings" element={<MyBookings />}></Route>
+            <Route path="/profile" element={<UserProfile />}></Route>
             <Route path="/payments/:paymentId" element={<Payment />}></Route>
             <Route path="/payment-success" element={<PaymentSuccess />} />
             <Route path="/payment-failed" element={<PaymentFailed />} />
+
         </Route>
     </>
 );

@@ -12,8 +12,6 @@ const UserHeader = () => {
         logout();
         navigate("/");
     };
-
-    // 👉 Click outside để đóng dropdown
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (

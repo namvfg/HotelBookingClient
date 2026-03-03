@@ -9,6 +9,8 @@ export const endpoints = {
     "register": "/register",
     "login": "/login",
     "user-me": "/user/me",
+    "user-profile": "/profile",
+
 
     //hotels
     "hotels": "/hotels",
