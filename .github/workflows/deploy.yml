@@ -42,4 +42,4 @@ jobs:
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "app-client/dist/*"
-          target: "/var/www/frontend/app-client/dist"
+          target: "/var/www/frontend"
