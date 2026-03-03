@@ -3,7 +3,7 @@ import { useAdminContext } from "../context/userAdminContext";
 import { useAdminAuth } from "../context/admin-auth/useAdminAuth";
 
 export default function Header() {
-    const { keyword, setKeyword } = useAdminContext();
+    const { setKeyword } = useAdminContext();
     const [value, setValue] = useState("");
     const { state } = useAdminAuth();
 
