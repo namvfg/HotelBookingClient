@@ -33,7 +33,7 @@ jobs:
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            rm -rf /var/www/frontend/app-client/dist
+            rm -rf /var/www/frontend/app-client
 
       - name: Deploy to VPS
         uses: appleboy/scp-action@v0.1.7
