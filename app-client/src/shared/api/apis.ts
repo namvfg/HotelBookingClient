@@ -52,7 +52,7 @@ export const endpoints = {
 
 }
 
-const serverIp = "149.28.135.167";
+const serverIp = "www.hotel.duckou.id.vn";
 // const serverIp = "127.0.0.1:8000";
 
 export default axios.create({
