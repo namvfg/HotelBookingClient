@@ -43,6 +43,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "app-client/dist/*"
+          source: "dist/*"
           target: "/var/www/frontend/app-client/dist"
           rm: true
