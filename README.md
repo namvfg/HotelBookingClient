@@ -119,5 +119,5 @@ Adjust API URL according to your backend deployment.
 
 
 ## 10. Link Demo
-User Demo: http://www.hotel.duckou.id.vn/
-Admin Demo: http://www.hotel.duckou.id.vn/admin/login  
+User Demo: http://[www.hotel.duckou.id.vn](http://149.28.135.167/)/
+Admin Demo: http://[www.hotel.duckou.id.vn](http://149.28.135.167/)/admin/login  
